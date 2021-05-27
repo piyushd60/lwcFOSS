@@ -1,0 +1,11 @@
+<template>
+    <template if:true={showRoomInfo}>
+        <div class="slds-p-around_medium lgc-bg" onclick={tileClickHandler}>
+            <slot name="roomInfo"></slot>
+            <slot></slot>
+            <lightning-tile label={meetingRoomInfo.name} href="/one/one.app">
+                <p class="slds-truncate" title={meetingRoomInfo.capacity}>Room Capacity : {meetingRoomInfo.capacity}</p>
+            </lightning-tile>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <template if:true = {check}>
+        <div>This is conditional </div>
+    </template>    
+        <lightning-input type="checkbox" label="Show Div" onchange={checkHndlr}></lightning-input>
+    <template for:each = {cityList} for:item = "city">
+        <p key={city}>{city}</p>
+    </template>
+    <template iterator:it = {cityList}>
+        <p key={it.value}>{it.value}</p>
+        <p key={it.value}> {it.index}</p>
+    </template>
+</template>
