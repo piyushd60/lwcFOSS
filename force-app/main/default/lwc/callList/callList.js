@@ -11,6 +11,9 @@ const columns = [
 ];
 
 export default class CallList extends LightningElement {
+
+    columns = new Map();
+    //columns.set('Account',['Name','Org Name','email','phone','Add to list']);
     records;
     sortedColumn;
     sortedDirection = 'asc';
