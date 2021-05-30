@@ -14,6 +14,7 @@ export default class CallList extends LightningElement {
 
     columns = new Map();
     //columns.set('Account',['Name','Org Name','email','phone','Add to list']);
+    headers =['Name','Organization','Email','Phone'];
     records;
     sortedColumn;
     sortedDirection = 'asc';
@@ -123,6 +124,11 @@ export default class CallList extends LightningElement {
 
     handleChange(event) {
         this.value = event.detail.value;
+        if(this.value === 'Account'){
+            this.headers = ['Organization Name','Email','Phone'];
+            console.log(this.value);
+            //fetchAccounts;
+        }
     }
 }
 
